@@ -1,0 +1,118 @@
+/* header */
+.header {
+	background-color: var(--secondary);
+	padding: 15px 0;
+	color: #fff;
+	border-bottom: 1px solid #333;
+}
+
+.header .flex {
+	justify-content: space-between;
+}
+
+.header a {
+	padding: 2px 15px;
+	border-radius: 5px;
+}
+.header a:hover {
+	animation: pulse; /* referring directly to the animation's @keyframe declaration */
+	animation-duration: 0.5s;
+}
+
+/* register */
+.register h1 {
+	color: var(--accent);
+}
+
+.register img {
+	width: 350px;
+}
+/* login */
+.login h1 {
+	color: var(--accent);
+}
+
+.login img {
+	width: 450px;
+}
+
+.login .form-btn {
+	border-radius: 8px;
+}
+
+/* about us */
+.about-us .btn {
+	padding: 5px 20px;
+}
+/* footer */
+footer .container {
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+/* search page */
+
+.search-results {
+	justify-items: center;
+}
+
+
+.home .tubers {
+	justify-items: center;
+}
+
+.top-banner {
+	position: relative;
+}
+.top-banner img {
+	height: 380px;
+	width: 100%;
+}
+.home .top-banner .top-container {
+	position: absolute;
+	top: 30%;
+	left: 0;
+}
+
+.cname {
+	color: rgb(105, 105, 11);
+
+} 
+
+.fname {
+	color: rgb(36, 36, 118);
+}
+
+.fname:hover {
+	color:rgb(36, 36, 118);
+	font-size: 1.15em;
+	text-decoration: none;
+}
+
+.mname {
+	color: rgb(118, 25, 25);
+}
+
+.font-caption {
+	font-size: 1.01em;
+	color: rgb(69, 69, 69);
+	/* text-transform: uppercase; */
+}
+
+.font-cation-desc {
+	font-size: 0.5em;
+	font-style: italic !important;
+	color: rgb(138, 139, 135);
+	
+}
+
+.f-button {
+	border: 0.5px solid black;
+	border-radius: 25px;
+	box-shadow: 0 0 5px 2px rgb(200, 200, 200);
+
+}
+
+.f-button:hover {
+	background-color: rgb(192, 220, 192);
+}

@@ -1,0 +1,31 @@
+{% extends 'includes/base.html' %}
+
+{% block title %}
+
+Active Bids
+{% endblock title %}
+
+
+
+
+{% block mainarea %}
+{% include 'messages.html' %}
+    <div class = "row">
+        {% for bid in all_bids %}
+            <div class="card" style="width: 18rem; margin : 1rem;">
+                <div class="card-body">
+                    <h5 class="card-title">{{bid.bid_for_crop.crop_name}}</h5>
+                    <!-- <h6>{{crop.farmer}}</h6> -->
+                    <small>Last Date: {{bid.bid_close_date}} Quintal</small>
+                    <p class="card-text"></p>
+                    <a href="{% url 'individual_crop' bid.bid_for_crop.id %}" class="btn btn-primary" style="background: #264ca4 !important; border: none !important;">View</a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+
+{% endblock mainarea %}
+
+
+

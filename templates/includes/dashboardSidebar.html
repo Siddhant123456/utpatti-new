@@ -1,0 +1,26 @@
+<aside >
+		<div class="list-group">
+  <a href="{% url 'dashboard' %}" class="list-group-item list-group-item-action {% if '/dashboard/' in request.path %}active{% endif %}">
+    My Profile
+  </a>
+  {% if user.isFarmer %}
+    <a href="{% url 'upload_crop' %}" class="list-group-item list-group-item-action {% if '/upload_crop/' in request.path %}active{% endif %}">Upload a Crop</a>
+    <a href="{% url 'view_crops'  %}" class="list-group-item list-group-item-action {% if '/view_crops/' in request.path %}active{% endif %}">View my Crops</a>
+    
+    <a href="#" class="list-group-item list-group-item-action {% if '/predict/' in request.path %}active{% endif %}">Predict Crop Yield</a>
+  
+  {% else %}
+    
+    <a href="{% url 'view_bids' %}" class="list-group-item list-group-item-action {% if '/view_bids' in request.path %}active{% endif %}">View Your Bids</a>
+  
+  {% endif %}
+  
+    
+
+
+  <a href="{% url 'change_password' %}" class="list-group-item list-group-item-action {% if '/change-password/' in request.path %}active{% endif %}">Change Password</a>
+<br/>
+  <a class="btn btn-secondary btn-block" href="{% url 'logout' %}"> <i class="fa fa-power-off"></i> <span class="text">Log out</span> </a> 
+  
+</div>
+	</aside>

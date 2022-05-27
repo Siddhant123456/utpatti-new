@@ -1,0 +1,151 @@
+:root {
+	--primary: #ffffff;
+	--secondary: #3a3e45;
+	--white: #888787;
+	--accent: #477d42;
+}
+
+body {
+	background-color: var(--primary);
+	background-image: url(../images/LeafLogo2.png);
+
+	color: rgb(54, 54, 54);
+}
+
+a {
+	color: rgb(26, 26, 26);
+}
+
+h2,
+h3 {
+	color: var(--accent);
+}
+.btn-accent {
+	background-color: var(--accent);
+	color: #fff;
+	border-color: var(--accent);
+	outline: none;
+}
+/*button{
+	background-color: var(--accent) !important;
+	color:white !important;
+}
+.btn-accent:hover {
+	color: #fff;
+	
+}
+ .active{
+	background-color: var(--accent) !important;
+	border-color: var(--accent) !important;
+} */
+.navbar-brand h2{
+	font-family: 'Cookie', cursive;
+	font-size: 3.1rem;
+}
+.active-linki a{
+
+	color: var(--accent) !important;
+}
+button:hover {
+	animation: pulse; /* referring directly to the animation's @keyframe declaration */
+	animation-duration: 0.5s;
+}
+
+.form-control[type='text'],
+[type='textarea'],
+[type='email'],
+[type='password'] {
+	padding: 20px 25px;
+	font-size: 19px;
+	border-radius: 8px;
+}
+textarea {
+	padding: 20px 25px;
+	font-size: 19px;
+	border-radius: 8px;
+}
+
+.card {
+	color: var(--secondary);
+	width: 18rem;
+}
+
+main {
+	overflow: hidden;
+}
+
+.table {
+	color: #fff;
+}
+
+.page-item.disabled .page-link,
+.page-link {
+	background-color: var(--accent);
+	border: none;
+	padding: 10px 20px;
+	line-height: none;
+	color: #fff;
+	margin: 0 3px;
+	border-radius: 3px;
+}
+
+.page-link:hover {
+	background-color: var(--accent);
+
+	color: var(--white);
+}
+
+.main-screen {
+	display: flex;
+	flex-direction: column;	
+}
+
+.main-content {
+	display: flex;
+	flex-direction: row;
+}
+
+.sidebar {
+	flex-basis: 25%;
+	margin: 5px;
+	padding: 5px;
+	
+}
+
+.mainarea {
+	flex-basis: 75%;
+	margin: 5px;
+	padding: 5px;
+}
+
+.navi-icons {
+	/* width: 15px;
+	height: 15px; */
+	border-radius: 50%;
+	display: block !important;
+	margin: auto !important;
+}
+
+#google_translate_element select{
+	background:#ffffff;
+	color:#4d9c4c;
+	border: none;
+	border-radius:3px;
+	padding:6px 8px
+	}
+	.goog-logo-link{
+	  display:none!important;
+	 }
+	.goog-te-gadget{
+	color:transparent!important;
+	} 
+	.goog-te-banner-frame{
+	display:none !important;
+	}
+	
+	#goog-gt-tt, .goog-te-balloon-frame{display: none !important;}
+   .goog-text-highlight { background: none !important; box-shadow: none !important;}
+
+.btn-primary { 
+	background: #2c63e5 !important; 
+}

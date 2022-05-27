@@ -1,0 +1,210 @@
+{% extends 'includes/base.html' %} {% block title %} Dashboard {% endblock title%} {% block mainarea %}
+<div class="container">
+
+  {% include 'messages.html' %}
+  <div class="row">
+    
+    <main>
+      <article class="card w-100">
+        <header class="card-header">
+          <strong class="d-inline-block mr-3">Edit Your Profile</strong>
+        </header>
+        <div class="card-body w-100">
+         <!--  <div class="text-center">
+            <a
+              onmouseout="removeText()"
+              onmouseover="changeText()"
+              onclick="changePic()"
+              id="picture"
+              ><img
+                {% if profile.image %}
+                  src="{{profile.image.url}}"
+                
+                {% else %}
+                  src = "{{profile.image}}"
+                {% endif %}
+                width="100"
+                height="100"
+                style="border-radius: 100px"
+                alt="Profile Picture" /><span id="update"></span
+            ></a>
+          </div> -->
+          
+          <div class="row">
+            <div class="col-md-12">
+              <form method="POST" action="{% url 'dashboard' %}" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label>First Name</label>
+                    <input
+                        name="f_name"
+                        type="text"
+                        class="form-control"
+                        {% if user.first_name != '' %}
+                          value = "{{user.first_name}}" 
+                        {% endif %}
+                        
+                    />
+                    
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label>Last Name</label>
+                    <input
+                        name="l_name"
+                        type="text"
+                        class="form-control"
+                        value = "{{user.last_name}}"
+                    />
+                    
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label>Phone Number </label>
+                    <input
+                        name="phone"
+                        type="text"
+                        class="form-control"
+                        value = "{{user.phone_number}}"
+                    />
+
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label>Profile Picture</label>
+                        <input type = "file" class ="form-control" name = "img">
+                  </div>
+                </div>
+                <div class = "form-row">
+                <div class="form-group col-md-6">
+                  <label>Aadhar Number</label>
+
+                        <input
+                        name="aadhar"
+                        type="text"
+                        class="form-control"
+                        value = "{{profile.aadhar_number}}"
+                    placeholder = "Aadhar Number"
+                    />
+
+                  
+                </div>
+                {% if profile.dob %}
+                          <div class="form-group col-md-6">
+                  <label>Date of Birth</label>
+
+                        <input
+                        name="dob"
+                        type="text"
+                        class="form-control"
+                        
+                        
+                        
+                        value = "{{profile.dob}}"
+                    placeholder = "Date of Birth"
+                    />
+
+                  
+                </div> 
+                        
+                {% else %}
+                <div class="form-group col-md-6">
+                  <label>Date of Birth</label>
+
+                        <input
+                        name="dob"
+                        type="date"
+                        class="form-control"
+                        
+                        value = "{{profile.dob}}"
+                    placeholder = "Date of Birth"
+                    />
+
+                  
+                </div>
+                {% endif %}
+                </div>
+
+                <div class="form-group">
+                  <label>Address Line 1</label>
+
+                        <input
+                        name="address_line_1"
+                        type="text"
+                        class="form-control"
+                        value = "{{profile.address_line_1}}"
+                    placeholder = "Address Line 1"
+                    />
+
+                  
+                </div>
+
+                <div class="form-group">
+                  <label>Address Line 2</label>
+
+                  
+                        <input
+                        name="address_line_2"
+                        type="text"
+                        class="form-control"
+                        placeholder = "Address Line 2"
+                        value = "{{profile.address_line_2}}"
+                    
+                    />
+
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-4">
+                    <label>City</label>
+
+                        <input
+                        name="city"
+                        type="text"
+                        class="form-control"
+                        value = "{{profile.city}}"
+                    placeholder = "City"
+                    />
+
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label>State</label>
+                            
+                        <input
+                        name="state"
+                        type="text"
+                        class="form-control"
+                        value = "{{profile.state}}"
+                        placeholder = "State"
+                    
+                
+                    />
+
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label>Country</label>
+                    
+                        <input
+                        name="country"
+                        type="text"
+                        class="form-control"
+                        value = "{{profile.country}}"
+                    placeholder = "Country"
+                    
+                    />
+
+                  </div>
+                </div>
+                <button class="btn btn-light" type="submit" value="Save">Save</button>
+              </form>
+            </div>
+          </div>
+          <!-- row.// -->
+        </div>
+        <!-- card-body .// -->
+        <!-- table-responsive .end// -->
+      </article>
+      <!-- order-group.// -->
+    </main>
+  </div>
+  <!-- row.// -->
+</div>
+
+{% endblock mainarea %}

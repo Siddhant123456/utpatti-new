@@ -1,0 +1,34 @@
+{% extends 'includes/base.html' %}
+
+{% load static %}
+
+{% block title %}
+    View Your Crops
+
+
+{% endblock title %}
+
+
+{% block mainarea %}
+  <div class = "row">
+    {% include 'messages.html' %}
+    {% for crop in crops %}
+        <div class="card" style="width: 18rem;  margin-bottom : 1rem; margin-left: 1rem;">
+            <div class="card-body">
+                <h5 class="card-title">{{crop.crop_name}}</h5>
+                <!-- <h6>{{crop.farmer}}</h6> -->
+                <small>{{crop.stock}} Quintal</small>
+                <p class="card-text">{{crop.crop_desc}}</p>
+                <a href="{% url 'individual_crop' crop.id %}" class="btn btn-primary" style="background: #264ca4 !important; border: none !important;">View</a>
+            </div>
+        </div>
+    {% endfor %}
+  </div>
+
+{% endblock mainarea %}
+
+
+
+
+
+
